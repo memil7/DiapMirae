@@ -5,8 +5,15 @@ class Repeller {
     this.power = 150;
   }
   
-  move(value) {
-    this.position.y -= value;
+    move(value) {
+    this.position.y += value;
+
+    if (this.position.y > height) {
+      this.position.y = 0;
+    }
+    else if (this.position.y < 0) {
+      this.position.y = height;
+    }
   }
   
   setPower(value) {
