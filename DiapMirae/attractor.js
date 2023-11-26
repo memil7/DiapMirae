@@ -2,7 +2,7 @@ class Attractor {
   constructor(x, y) {
     this.position = createVector(x, y);
     //{!1} How strong is the repeller?
-    this.power = 150;
+    this.power = 50;
   }
   
   move(value) {
@@ -10,12 +10,12 @@ class Attractor {
   }
   
   setPower(value) {
-    this.power = map(value, 0, width, -300, 300);
+    this.power = map(value, 0, width, -50, 50);
   }
 
   show() {
     stroke(0);
-    strokeWeight(2);
+    strokeWeight(5);
     fill(200, 130, 50);
   }
 
