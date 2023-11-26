@@ -12,8 +12,10 @@ function setup() {
   att = new Attractor(20, height/2);
 }
 
+
 function draw() {
   background(255);
+  
     
   repeller.setPower(mouseY);
   repeller.move(0.5);
@@ -24,6 +26,9 @@ function draw() {
   
   // We’re applying a universal gravity.
   let gravity = createVector(0, 0.1);
+  if (mouseIsPressed) {
+    let wind = createVector(0.1, 0);
+  emitter.applyForce(wind);}
   emitter.applyForce(gravity);
   //{!1} Applying the repeller
   emitter.applyRepeller(repeller);
