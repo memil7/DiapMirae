@@ -10,7 +10,7 @@ let gui;
 let params = {
   testValue : 10,
   testValueMin : 0,
-  testValueMax : 500,
+  testValueMax : 100,
   testValueStep : 2,
   move : 1,
   moveMin : 0,
@@ -34,7 +34,7 @@ function setup() {
   att = new Attractor(20, height/2);
   
   pSlider = createSlider(0, 500, 100);
-  pSlider.position(10, 320);
+  pSlider.position(10, 10);
   nSlider = createSlider(0, 100, 0);
   nSlider.position(10, 340);
   
