@@ -16,7 +16,7 @@ let params = {
   moveMin : 0,
   moveMax : 10,
   moveStep : 0.1,
-  tColor : [200, 0, 0],
+  tColor : [0, 200, 0],
   tChoice : ['pineapple', 'melon', 'peach','watermelon']
 }
 
