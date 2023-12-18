@@ -16,8 +16,15 @@ class Attractor {
   show() {
     stroke(0);
     strokeWeight(2);
-    fill(200, 130, 50);
-    circle(this.position.x, this.position.y, 10);
+    fill(255, 0, 0);
+  // 화면 가운데 위치 계산
+    let centerX = width / 2;
+
+  // 양 옆으로 왔다갔다 움직이는 효과를 주기 위해 sin 함수 사용
+    let offset = 20 * sin(frameCount * 0.1);
+  
+  // 화면 가운데 위치에 움직임을 더하여 원을 그림
+    circle(centerX + offset, this.position.y, 32);
   }
 
   pull(particle) {
